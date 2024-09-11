@@ -18,4 +18,4 @@ linkedList.prepend(5)
 linkedList.print()
 console.log(linkedList.count(5))
 console.log(linkedList.search(10)); 
-console.log(linkedList.search(50)); 
+console.log(linkedList.search(50));
