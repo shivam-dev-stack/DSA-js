@@ -113,7 +113,7 @@ class LinkedList {
         return `${data} found ${count} times`; 
     }
 
-    reverseList() {        
+    reverseList() {
         let curr = this.head;
         let prev = null;
         let next;
