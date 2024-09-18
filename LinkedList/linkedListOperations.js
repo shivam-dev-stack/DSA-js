@@ -16,6 +16,8 @@ linkedList.deleteNth(2)
 linkedList.print()
 linkedList.prepend(5)
 linkedList.print()
+linkedList.sort()
+linkedList.print()
 console.log(linkedList.count(5))
 console.log(linkedList.search(10)); 
 console.log(linkedList.search(50));

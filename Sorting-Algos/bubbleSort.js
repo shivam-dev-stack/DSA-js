@@ -13,6 +13,5 @@ function bubbleSort(arr) {
     console.log(`final sorted array: ${arr}`);
 }
 
-
 const arr = [12, 37, 104, 63, 22, 71, 55, 62, 75];
 bubbleSort(arr);
