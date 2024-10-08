@@ -156,6 +156,60 @@ class LinkedList {
       }
     }
   }
+
+  getLength() {
+    let len = 0;
+    let curr = this.head;
+    while (curr) {
+      len++;
+      curr = curr.next;
+    }
+    return len;
+  }
+
+  bubbleSort() {
+    let head = this.head;
+    let len = this.getLength();
+    let itr = 0;
+    let swapped;
+
+    while (itr < len) {
+      let traverseNode = head;
+      let prevNode = head;
+      swapped = false;
+
+      while (traverseNode.next !== null) {
+
+        let ptr = traverseNode.next;
+        if (traverseNode.data > ptr.data) {
+          swapped = true;
+          traverseNode.next = ptr.next;
+          ptr.next = traverseNode;
+          
+          if (traverseNode === head) {
+           
+            prevNode = ptr;
+            head = prevNode;
+          } else {
+            
+            prevNode.next = ptr;
+            prevNode = ptr;
+          }
+          continue;
+        }
+        prevNode = traverseNode;
+        traverseNode = traverseNode.next;
+      }
+
+      if (!swapped) {
+        break;
+      }
+
+      itr++;
+    }
+
+    return head;
+  }
 }
 
 export { LinkedList };
